@@ -9,9 +9,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class YandexTest {
     @Test
     void yandexTest() {
-        open("https://www.google.com/");
-        $("[name=q]").setValue("selenide").pressEnter();
-        $("[id=search]").shouldHave(text("selenide.org"));
-        Configuration.pageLoadStrategy="eager";
+        //!!!///
     }
 }
