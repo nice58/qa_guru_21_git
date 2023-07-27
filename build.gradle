@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+group 'guru.qa'
+version '1.0'
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:6.16.0", // сторонняя библиотека
+            "org.junit.jupiter:junit-jupiter:5.9.3") // сторонняя библиотека
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8' // для кирилицы
+}
+
+test {
+    useJUnitPlatform()
+}
